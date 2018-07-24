@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bluecoats - Images</title>
+  <link rel="stylesheet" href="./mainFlex.css">
+</head>
+
+<body>
+  <header></header>
+
+  <div class="gallery">
+    <div class="hero"></div>
+    <div class="thumbs"></div>
+  </div>
+
+<style>
+  .gallery {
+    /* background: #eee; */
+    width: 600px;
+    margin: 1em auto;
+  }
+  .gallery img {
+    max-width: 100%;
+    height: auto;
+  }
+  .gallery .hero {
+    padding: 1em;
+  }
+  .gallery .thumbs {
+    /* background: #ddd; */
+    padding: 1em;
+    text-align: center;
+  }
+  .gallery .thumbs img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin: 0.5rem;
+  }
+  .gallery .active {
+    opacity: 0.5;
+  }
+</style>
+
+
+  <script>
+    var images = [
+      'http://www.indeonline.com/storyimage/OH/20160812/NEWS/160819762/AR/0/AR-160819762.jpg',
+      'https://bluecoats.com/wp-content/uploads/2016/08/Bluecoats-win-2016-DCI-Championship-YouTube-800x422.jpg',
+      'https://i.pinimg.com/originals/f0/f6/20/f0f620bf6b45bf97fd41176f9d854725.jpg',
+      'https://bluecoats.com/wp-content/uploads/2018/06/2016-dci-championships-1-1000x600.jpg'
+    ];
+
+    var galleryBox = document.querySelector('.gallery');
+
+    var heroImage = `<img src="${images[0]}" />`;
+
+    var thumbs = "";
+
+    images.forEach(function(image) {
+      thumbs += `<img src="${image}" />`;
+    });
+
+    var heroDiv = galleryBox.querySelector('.hero');
+    heroDiv.innerHTML = heroImage;
+
+    var thumbsDiv = galleryBox.querySelector('.thumbs');
+    thumbsDiv.innerHTML = thumbs;
+
+    galleryBox.addEventListener('click', function() {
+      if (event.target.src){
+        var newImage = `<img src="${event.target.src}" />`;
+        heroDiv.innerHTML = newImage;
+        console.log(newImage);
+      }
+    });
+
+  </script>
+
+
+<footer>
+  <a href="./indexFlex.html">Back</a>
+</footer>
+</body>
+</html>
