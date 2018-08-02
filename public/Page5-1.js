@@ -14,15 +14,14 @@ async function getComments() {
   var comments = await resp.json();
   var html = "";
   comments.forEach(function(comment){
-    html += "<div>";
+    html += '<div class="commentBlock">';
     html += `<span>Message: ${comment.message}</span>`;
-    html += "</div>";
-    html += "<div>";
+    html += "<br>";
     html += `<span>Submitted by: ${comment.email}</span>`;
     html += "</div>";
-    html += "<div>";
-    html += `__________________________________________________________`;
-    html += "</div>";
+    // html += "<div>";
+    // html += `__________________________________________________________`;
+    // html += "</div>";
   });
   content.innerHTML = html;
   console.log(html);

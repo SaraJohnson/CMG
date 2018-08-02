@@ -142,7 +142,7 @@ a:hover {
 
 
 #main {
-  max-width: 500px;
+  max-width: 70%;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
@@ -160,7 +160,7 @@ a:hover {
   flex-direction: column;
   overflow: scroll;
   overflow-x: hidden;
-  height: 400px;
+  height: auto;
   padding: 10px;
 }
 
@@ -169,6 +169,7 @@ a:hover {
   flex-direction: column;
   margin: 0;
   padding: 0;
+  /* border: 3px solid #015480; */
 }
 
 .todoItem {
@@ -177,8 +178,14 @@ a:hover {
   justify-content: space-between;
 }
 
+
 #input {
   display: flex;
+  padding: 5px;
+  font-size: 12pt;
+  content-align: center;
+
+  /* resize: vertical; */
 }
 
 #text {
@@ -188,16 +195,21 @@ a:hover {
 }
 
 #email {
+  display: flex;
   resize: none;
-  padding: 10px;
+  padding: 5px;
   font-size: 12pt;
+  content-align: center;
 }
 
 #submit {
+  display: flex;
+  margin: 40px;
   font-size: 12pt;
   padding: 20px;
-  background: #8ea8c3;
+  background: #dbba59;
   color: white;
+  text-align: center;
 }
 
 .videoWrapper {
@@ -221,10 +233,16 @@ a:hover {
   text-align: center;
 }
 
-script {
+.commentBlock {
+  border: 3px solid #015480;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* script {
   max-width: 300px;
   height: 300px;
-}
+} */
 
 /* .gallery {
   background: #eee;
